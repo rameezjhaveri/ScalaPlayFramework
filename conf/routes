@@ -1,0 +1,11 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+GET        /                    controllers.Application.index
+GET        /server              controllers.Application.serverDown
+GET        /logout              controllers.Application.removeSession
+GET        /topSecret           controllers.Application.accessWithSession
+GET        /user/:name          controllers.Application.displayName(name: String)
+GET        /assets/*file        controllers.Assets.at(path="/public", file)
